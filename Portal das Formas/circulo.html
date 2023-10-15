@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Portal das Formas | Circulo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="title">
+      <h1>forma geométrica <span>circulo</span>!</h1>
+    </div>
+    <a href="./index.html" class="voltar">Voltar</a>
+  </header>
+
+</head>
+
+<body>
+
+      <main>
+      
+        <h1>A área de um círculo é pi vezes o raio elevado ao quadrado (A = π r²). Aprenda a usar esta fórmula para calcular a área de um círculo, quando souber a medida do diâmetro.</h1>  
+          <form>
+      <label for="base">Raio:</label>
+      <input type="number" id="raio" step="any" placeholder="Digite o raio"><br><br>
+      
+    
+    <div class="btn"> 
+      <input class="btn-form" type="button" value="Calcular" onclick="calcularArea()"> 
+    </div> 
+  </form>
+    <p id="resultado"></p>
+
+    
+  </main>
+  
+    
+</body>
+
+<script>
+    function calcularArea() {
+        var raio = parseFloat(document.getElementById("raio").value);
+        var area = Math.PI * raio * raio;
+        document.getElementById("resultado").innerHTML = "A área do círculo é: " + area.toFixed(2);
+    }
+</script>
+</html>

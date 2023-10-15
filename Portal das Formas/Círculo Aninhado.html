@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Portal das Formas | Circulo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="title">
+      <h1>forma geométrica <span>Ciculo Aninhado</span>!</h1>
+    </div>
+    <a href="./index.html" class="voltar">Voltar</a>
+  </header>
+
+  <main>
+    <p> Vamos calcular a área de um setor circular dentro de um círculo maior. 
+        Isso envolve calcular a área do setor, subtrair a área do triângulo formado pelo raio do setor e depois adicionar a área do círculo maior..</p>
+    <form>
+      <label for="baseMaior">Base Maior: </label>
+      <input type="number" id="baseMaior" placeholder="baseMaior"><br><br>
+      
+      <label for="baseMenor">Base Menor: </label>
+      <input type="number" id="baseMenor" placeholder="baseMenor"><br><br>
+      
+      <label for="altura">Altura: </label>
+      <input type="number" id="altura" placeholder="altura"><br><br>
+      
+      <div class="btn"> 
+        <input class="btn-form" type="button" value="Calcular" onclick="calcularArea()"> 
+      </div> 
+
+
+    <p id="resultado"></p>
+    </form>
+
+    <div class="res">
+      <h3></h3>
+    </div>
+    
+
+  </main>
+
+  <script>
+    function calcularArea() {
+      var baseMaior = parseFloat(document.getElementById("baseMaior").value);
+      var baseMenor = parseFloat(document.getElementById("baseMenor").value);
+      var altura = parseFloat(document.getElementById("altura").value);
+      
+      var area = ((baseMaior + baseMenor) / 2) * altura;
+      
+      document.getElementById("resultado").innerHTML = "Área: " + area;
+    }
+    </script>
+
+
+</body>
+</html>

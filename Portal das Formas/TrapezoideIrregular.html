@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+        <html lang="pt-br">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>O Portal das Formas | Circulo</title>
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+          <header>
+            <div class="title">
+              <h1>forma geométrica <span>Trapezoide Irregular</span>!</h1>
+            </div>
+            <a href="./index.html" class="voltar">Voltar</a>
+          </header>
+        
+          <main>
+            <p>onde os quatro lados têm diferentes comprimentos. Teremos que aplicar fórmulas de geometria mais avançadas para chegar à área correta.</p>
+            <form>
+             <div class="form">
+              <label>
+                Raio
+                <input type="number" id="raio" placeholder="Raio">
+              </label>
+        
+              <label>
+                PI
+                <input type="text" id="pi" value="3,14" disabled>
+              </label>
+             </div>
+        
+             <div class="btn">
+              <input class="btn-form disabled" type="button" value="Calcular" disabled>
+            </div>
+            </form>
+        
+            <div class="res">
+              <h3></h3>
+            </div>
+            
+        
+          </main>
+
+          <script>
+            function calcularArea() {
+              var baseMaior = parseFloat(document.getElementById("baseMaior").value);
+              var baseMenor = parseFloat(document.getElementById("baseMenor").value);
+              var altura = parseFloat(document.getElementById("altura").value);
+              
+              var area = ((baseMaior + baseMenor) / 2) * altura;
+              
+              document.getElementById("resultado").innerHTML = "Área: " + area;
+            }
+            </script>
+        
+        
+        </body>
+        </html>

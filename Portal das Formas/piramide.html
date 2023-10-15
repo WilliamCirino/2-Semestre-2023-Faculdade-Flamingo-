@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Portal das Formas | Tronco da pirâmide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header> 
+    <div class="title"> 
+      <h1>Calculadora de Área do <span id="nome">tronco da piramide</span>!</h1>
+    </div> 
+    <a href="./index.html" class="voltar">Voltar</a>
+    </div> 
+  </header> 
+  
+ 
+<main> 
+    <h1>A área do tronco da pirâmide, portanto, é determinada pelas somas das áreas da base maior (AB), base menor (Ab) e área das faces laterais (Al).</h1>
+    <form>
+
+    <label for="base">Base da Pirâmide:</label>
+
+    <input type="number" id="base" step="any" placeholder="Digite a base"><br><br>
+    
+    <label for="altura">Altura Lateral da Pirâmide:</label>
+    <input type="number" id="altura" step="any" placeholder="Digite a altura"><br><br>
+    
+ 
+    <div class="btn"> 
+      <input class="btn-form" type="button" value="Calcular" onclick="calcularArea()"> 
+    </div> 
+  </form>
+    
+    <p id="resultado"></p>
+</main>
+    <script>
+        function calcularArea() {
+            var base = parseFloat(document.getElementById("base").value);
+            var altura = parseFloat(document.getElementById("altura").value);
+            
+            var areaBase = base ** 2;
+            var areaLateral = base * altura;
+            var areaTotal = areaBase + areaLateral;
+            
+            document.getElementById("resultado").innerHTML = "A área da superfície da pirâmide é: " + areaTotal;
+        }
+    </script>
+</body>
+
+</html>
